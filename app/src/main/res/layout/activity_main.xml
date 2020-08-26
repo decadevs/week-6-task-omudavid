@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/mainActivity">
+
+
+    <!-- Header Text -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="@string/joinUs"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/etName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495" />
+
+    <!-- Name edit text -->
+    <EditText
+        android:id="@+id/etName"
+        style="@style/textView"
+        android:drawableLeft="@drawable/ic_person"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.197" />
+
+    <!-- Name edit text -->
+    <EditText
+        android:id="@+id/etMail"
+        style="@style/textView"
+        android:hint="@string/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:drawableLeft="@drawable/ic_mail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <!-- Phone number edit text -->
+    <EditText
+        android:id="@+id/etPhone"
+        style="@style/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_phone"
+        android:hint="@string/phone"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMail" />
+
+
+
+    <!-- Sexes spinner -->
+    <Spinner
+        android:id="@+id/spSexes"
+        style="@style/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/sexes"
+        android:paddingLeft="44dp"
+        android:popupBackground="#8882E9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+
+
+    <!-- Sexes Icon Image View -->
+    <ImageView
+        android:id="@+id/mainSexesIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/ic_action_gender"
+        app:layout_constraintBottom_toBottomOf="@+id/spSexes"
+        app:layout_constraintStart_toStartOf="@+id/spSexes"
+        app:layout_constraintTop_toTopOf="@+id/spSexes"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+
+
+    <ImageView
+        android:id="@+id/ivBackgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/background_landing_page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spSexes"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:textColor="#ffffff"
+        android:text="@string/register"
+        android:background="@drawable/button_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spSexes" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

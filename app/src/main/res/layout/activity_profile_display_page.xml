@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileDisplayPageActivity"
+    android:id="@+id/profileDisplayActivity">
+
+<!-- View for purple background -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/purple_curve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--  Card view containing profile image  -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        app:cardCornerRadius="500dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view">
+
+<!-- Profile picture image view       -->
+        <ImageView
+            android:id="@+id/ivProfilePicture"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_profile_picture" />
+
+    </androidx.cardview.widget.CardView>
+
+<!-- Name text view -->
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/info_text_view_style"
+        android:drawableLeft="@drawable/ic_person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+<!--    Email text view-->
+    <TextView
+        android:id="@+id/tvEmail"
+        style="@style/info_text_view_style"
+        android:drawableLeft="@drawable/ic_mail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+<!--    Phone number text view -->
+    <TextView
+        android:id="@+id/tvPhoneNumber"
+        style="@style/info_text_view_style"
+        android:drawableLeft="@drawable/ic_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+
+<!--    Sex text view-->
+    <TextView
+        android:id="@+id/tvSex"
+        style="@style/info_text_view_style"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPhoneNumber" />
+
+<!--    Sexes icon image view-->
+    <ImageView
+        android:id="@+id/profileSexesIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_action_gender"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSex"
+        app:layout_constraintStart_toStartOf="@+id/tvSex" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Week6Task</string>
+    <string-array name="sexes">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+    </string-array>
+    <string name="joinUs">JOIN US</string>
+    <string name="register">Register</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+</resources>
